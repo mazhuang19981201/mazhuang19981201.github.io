@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
+<title>JSONView插件的坑 | Gridea</title>
 <meta name="description" content="温故而知新" />
 <link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1585152926718">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -70,41 +70,51 @@
   </div>
 </div>
 
-    
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              JSONView插件的坑
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-03-26
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>由于之前在测试项目时，后端的返回数据为json格式，由于直接响应的页面时，它的可读性不是很高，所以我就下载了一个插件，叫做JSONView，使用插件后自我感觉良好，显示的json的进行了格式化可读性也比较高。<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585152632865.png" alt=""><br>
+但是之后对数据库中的信息进行添加操作时，发现了一个很奇妙的bug，就是如果在主键自增的基础上，在添加信息时，总是把相同的一个信息同时添加两条记录，在无数次查看后端代码，总是发现不了问题所在，最后在谷歌浏览器的抓包工具上发现了问题<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585152809741.png" alt=""><br>
+JSONView插件在启动状态下，向后端发送请求时，会发送两次请求，当我把JSONView插件关闭掉之后，这个问题就不存在了。<br>
+具体为什么会发送两次请求，欢迎大佬前来指点。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti">
+              <h3 class="post-title">
+                在maven中使用tomcat插件无法启动的问题
+              </h3>
+            </a>
+          </div>
         
 
-<div class="archives-container">
-  
-    <h2 class="year">2020</h2>
-    
-      
-        <a href="https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng" class="post">
-          <h2 class="post-title">
-            JSONView插件的坑
-          </h2>
-          <div class="time">2020-03-26</div>
-        </a>
-      
-    
-      
-        <a href="https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti" class="post">
-          <h2 class="post-title">
-            在maven中使用tomcat插件无法启动的问题
-          </h2>
-          <div class="time">2020-03-25</div>
-        </a>
-      
-    
-  
-</div>
+        
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
-
-    
         <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
   <a class="rss" href="https://mazhuang19981201.github.io//atom.xml" target="_blank">RSS</a>

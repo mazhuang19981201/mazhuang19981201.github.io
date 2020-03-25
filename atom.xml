@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-03-25T16:04:00.509Z</updated>
+    <updated>2020-03-25T16:15:31.038Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[JSONView插件的坑]]></title>
+        <id>https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng</id>
+        <link href="https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng">
+        </link>
+        <updated>2020-03-25T16:07:11.000Z</updated>
+        <content type="html"><![CDATA[<p>由于之前在测试项目时，后端的返回数据为json格式，由于直接响应的页面时，它的可读性不是很高，所以我就下载了一个插件，叫做JSONView，使用插件后自我感觉良好，显示的json的进行了格式化可读性也比较高。<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585152632865.png" alt=""><br>
+但是之后对数据库中的信息进行添加操作时，发现了一个很奇妙的bug，就是如果在主键自增的基础上，在添加信息时，总是把相同的一个信息同时添加两条记录，在无数次查看后端代码，总是发现不了问题所在，最后在谷歌浏览器的抓包工具上发现了问题<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585152809741.png" alt=""><br>
+JSONView插件在启动状态下，向后端发送请求时，会发送两次请求，当我把JSONView插件关闭掉之后，这个问题就不存在了。<br>
+具体为什么会发送两次请求，欢迎大佬前来指点。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在maven中使用tomcat插件无法启动的问题]]></title>
         <id>https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti</id>
