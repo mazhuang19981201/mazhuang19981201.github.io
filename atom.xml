@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-03-25T15:15:28.276Z</updated>
+    <updated>2020-03-25T15:32:04.532Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,4 +10,17 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[在maven中使用tomcat插件无法启动的问题]]></title>
+        <id>https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti</id>
+        <link href="https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti">
+        </link>
+        <updated>2020-03-25T15:15:35.000Z</updated>
+        <content type="html"><![CDATA[<p>在近在写一个项目的时候，突然遇到了一个问题，我的项目用本地的tomcat启动没有任何的问题，然而当我用maven的tomcat插件的时候，突然就报出了一个令我百思不得其解的错误。如下：<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585149723987.png" alt=""><br>
+我在百度上面找了好多的解决方案还是没有找到真正的解决问题的方案。最后发现是在刚开始写程序时，在我的jdk的Java\jdk1.8.0_181\jre\lib\ext这个目录下放了servler-api.jar<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585150218331.png" alt=""><br>
+在jdk运行时，jdk自身的servlet-api插件和maven的tomcat插件发生了冲突，删除掉jdk的servlet-api.jar就可以运行了。</p>
+]]></content>
+    </entry>
 </feed>
