@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>马壮的博客</title>
-    <updated>2020-03-26T00:26:07.762Z</updated>
+    <updated>2020-03-26T04:36:22.229Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,6 +10,16 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, 马壮的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[java面试题第一模块 java基础部分]]></title>
+        <id>https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-yi-mo-kuai-java-ji-chu-bu-fen</id>
+        <link href="https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-yi-mo-kuai-java-ji-chu-bu-fen">
+        </link>
+        <updated>2020-03-26T04:33:43.000Z</updated>
+        <content type="html"><![CDATA[<p>最近在知乎上看到了一些不错的java面试题，感觉质量挺高的，在此记录一下：<br>
+<a href="https://mp.weixin.qq.com/s/IBbD3CmVWsTL9ymHg6gGGA">知乎面试题第一部分</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[JSONView插件的坑]]></title>
         <id>https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng</id>
