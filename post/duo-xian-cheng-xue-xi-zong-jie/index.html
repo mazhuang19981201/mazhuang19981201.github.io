@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>JSONView插件的坑 | 马壮的博客</title>
+<title>多线程学习总结 | 马壮的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,25 +92,46 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">JSONView插件的坑</h2>
-            <div class="post-date">2020-03-26</div>
+            <h2 class="post-title">多线程学习总结</h2>
+            <div class="post-date">2020-03-28</div>
             
             <div class="post-content">
-              <p>由于之前在测试项目时，后端的返回数据为json格式，由于直接响应的页面时，它的可读性不是很高，所以我就下载了一个插件，叫做JSONView，使用插件后自我感觉良好，显示的json的进行了格式化可读性也比较高。<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585152632865.png" alt=""><br>
-但是之后对数据库中的信息进行添加操作时，发现了一个很奇妙的bug，就是如果在主键自增的基础上，在添加信息时，总是把相同的一个信息同时添加两条记录，在无数次查看后端代码，总是发现不了问题所在，最后在谷歌浏览器的抓包工具上发现了问题<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585152809741.png" alt=""><br>
-JSONView插件在启动状态下，向后端发送请求时，会发送两次请求，当我把JSONView插件关闭掉之后，这个问题就不存在了。<br>
-具体为什么会发送两次请求，欢迎大佬前来指点。</p>
+              <h1 id="多线程的实现方式">多线程的实现方式</h1>
+<p>1.继承Thread类，重写run方法。<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585374327048.png" alt=""><br>
+2.实现Runable接口，重写接口中的run方法，用start方法来启动线程<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585374415872.png" alt=""><br>
+3.Runable相对于Thread的优势<br>
+（1）适合多个相同的程序代码的线程去共享一个资源<br>
+（2）可以避免java中单继承的局限性<br>
+（3）增加程序的健壮性，实现解耦，代码可以被多个线程共享，代码和线程独立<br>
+（4）线程池只能放入实现Runable或者是Callable类线程，不能直接放入继承Thread的类</p>
+<h1 id="线程安全问题解决方案">线程安全问题解决方案</h1>
+<h2 id="线程同步">线程同步</h2>
+<p>1.同步代码块<br>
+（1）锁对象，可以是任意类型<br>
+（2）多个线程对象，要使用同一把锁<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585374781827.png" alt=""><br>
+2.同步方法<br>
+（1）使用synchronized修饰的方法，保证A线程使用该方法时，其他线程只能方法外等候。<br>
+（2）同步方法实际上是吧this作为锁对象<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585374922056.png" alt=""><br>
+3.静态同步方法<br>
+（1）在同步方法的基础上使用static修饰<br>
+（2）静态同步方法实际上是把当前类的.class作为锁对象<br>
+4.Lock锁<br>
+（1） java.util. concurrent. locks . Lock机制提供了比synchronized代码块和                     synchronized方法更广泛的锁定操作,同步代码块/同步方法具有的功能Lock都                     有,除此之外更强大,更体现面向对象。<br>
+（2）<br>
+<img src="https://mazhuang19981201.github.io//post-images/1585375228208.png" alt=""></p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti">
+                <a href="https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-er-bu-fen-rong-qi-bu-fen">
                   <h3 class="post-title">
-                    在maven中使用tomcat插件无法启动的问题
+                    java面试题第二部分（容器部分）
                   </h3>
                 </a>
               </div>
