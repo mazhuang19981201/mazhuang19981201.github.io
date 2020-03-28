@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1585378069516">
+<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1585378194910">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mazhuang19981201.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://mazhuang19981201.github.io/">
-        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1585378069516" class="site-logo">
+        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1585378194910" class="site-logo">
         <h1 class="site-title">马壮的博客</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -124,21 +124,17 @@
 （2）<br>
 <img src="https://mazhuang19981201.github.io//post-images/1585375228208.png" alt=""></p>
 <h1 id="线程状态概述">线程状态概述</h1>
-<pre><code>![](https://mazhuang19981201.github.io//post-images/1585377771710.png)
-</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://mazhuang19981201.github.io//post-images/1585377771710.png" alt=""></figure>
 <h2 id="什么是等待唤醒机制">什么是等待唤醒机制</h2>
-<pre><code>这是多个线程间的一种协作机制。 谈到线程我们经常想到的是线程间的竞争( race ) ,比如去争夺锁,但这并不是故事的全部,线程间也会有协作机制。就好比在公司里你和你的同事们,你们可能存在在晋升时的竞争,但更多时候你们更多是一起合作以完成某些任务。
-就是在一个线程进行了规定操作后,就进入等待状态( wait() ),等待其他线程执行完他们的指定代码过后 再将其唤醒( notify() ) ;在有多个线程进行等待时，如果需要,可以使用notifAll()来唤醒所有的等待线程。
-wait/notify就是线程间的一种协作机制。
+<pre><code> 这是多个线程间的一种协作机制。 谈到线程我们经常想到的是线程间的竞争( race ) ,比如去争夺锁,但这并不是故事的全部,线程间也会有协作机制。就好比在公司里你和你的同事们,你们可能存在在晋升时的竞争,但更多时候你们更多是一起合作以完成某些任务。
+ 就是在一个线程进行了规定操作后,就进入等待状态( wait() ),等待其他线程执行完他们的指定代码过后 再将其唤醒( notify() ) ;在有多个线程进行等待时，如果需要,可以使用notifAll()来唤醒所有的等待线程。
+ wait/notify就是线程间的一种协作机制。
 </code></pre>
 <h2 id="等待唤醒中的方法">等待唤醒中的方法</h2>
-<pre><code>等待唤醒机制就是用于解决线程间通信的问题的,使用到的3个方法的含义如下:
-1. wait :线程不再活动,不再参与调度,进入waitset中,因此不会浪费CPU资源,也不会去竞争锁了,这时的线程状态即是WAITING。它还要等着别的线程执行一个特别的动作,也即是&quot;通知( notify )“在这个对象上等待的线程从wait set中释放出来,重新进入到调度队列( ready queue )中。
-</code></pre>
-<ol start="2">
-<li>notify :则选取所通知对象的wait set中的一个线程释放;例如,餐馆有空位置后,等候就餐最久的顾客最先入座。</li>
-<li>notifyAll :则释放所通知对象的wait set.上的全部线程。</li>
-</ol>
+<pre><code> 等待唤醒机制就是用于解决线程间通信的问题的,使用到的3个方法的含义如下:
+  wait :线程不再活动,不再参与调度,进入waitset中,因此不会浪费CPU资源,也不会去竞争锁了,这时的线程状态即是WAITING。它还要等着别的线程执行一个特别的动作,也即是&quot;通知( notify )“在这个对象上等待的线程从wait set中释放出来,重新进入到调度队列( ready queue )中。
+  notify :则选取所通知对象的wait set中的一个线程释放;例如,餐馆有空位置后,等候就餐最久的顾客最先入座。
+  notifyAll :则释放所通知对象的wait set.上的全部线程。</code></pre>
 
             </div>
             
