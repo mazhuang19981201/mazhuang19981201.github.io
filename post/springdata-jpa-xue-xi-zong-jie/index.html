@@ -1,22 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://mazhuang19981201.github.io/</id>
-    <title>马壮的博客</title>
-    <updated>2020-04-05T12:18:29.383Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
-    <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
-    <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2020, 马壮的博客</rights>
-    <entry>
-        <title type="html"><![CDATA[springdata jpa学习总结]]></title>
-        <id>https://mazhuang19981201.github.io//post/springdata-jpa-xue-xi-zong-jie</id>
-        <link href="https://mazhuang19981201.github.io//post/springdata-jpa-xue-xi-zong-jie">
-        </link>
-        <updated>2020-04-05T11:45:59.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="jpa-的介绍">jpa 的介绍</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>springdata jpa学习总结 | 马壮的博客</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1586089107162">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mazhuang19981201.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mazhuang19981201.github.io/">
+        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1586089107162" class="site-logo">
+        <h1 class="site-title">马壮的博客</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mazhuang19981201.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">springdata jpa学习总结</h2>
+            <div class="post-date">2020-04-05</div>
+            
+            <div class="post-content">
+              <h1 id="jpa-的介绍">jpa 的介绍</h1>
 <p>JPA的全称是Java Persistence API， 即Java 持久化API，是SUN公司推出的一套基于ORM的规范，内部是由一系列的接口和抽象类构成。<br>
 JPA通过JDK 5.0注解描述对象－关系表的映射关系，并将运行期的实体对象持久化到数据库中。</p>
 <h1 id="springdata-jpa-介绍">springdata jpa 介绍</h1>
@@ -314,100 +394,47 @@ private String custPhone;
 <p><img src="https://mazhuang19981201.github.io//post-images/1586088938099.png" alt=""><br>
 <img src="https://mazhuang19981201.github.io//post-images/1586088942923.png" alt=""><br>
 其他操作与hibernate类型</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[多线程学习总结]]></title>
-        <id>https://mazhuang19981201.github.io//post/duo-xian-cheng-xue-xi-zong-jie</id>
-        <link href="https://mazhuang19981201.github.io//post/duo-xian-cheng-xue-xi-zong-jie">
-        </link>
-        <updated>2020-03-28T05:43:23.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="多线程的实现方式">多线程的实现方式</h1>
-<p>1.继承Thread类，重写run方法。<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585374327048.png" alt=""><br>
-2.实现Runable接口，重写接口中的run方法，用start方法来启动线程<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585374415872.png" alt=""><br>
-3.Runable相对于Thread的优势<br>
-（1）适合多个相同的程序代码的线程去共享一个资源<br>
-（2）可以避免java中单继承的局限性<br>
-（3）增加程序的健壮性，实现解耦，代码可以被多个线程共享，代码和线程独立<br>
-（4）线程池只能放入实现Runable或者是Callable类线程，不能直接放入继承Thread的类</p>
-<h1 id="线程安全问题解决方案">线程安全问题解决方案</h1>
-<h2 id="线程同步">线程同步</h2>
-<p>1.同步代码块<br>
-（1）锁对象，可以是任意类型<br>
-（2）多个线程对象，要使用同一把锁<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585374781827.png" alt=""><br>
-2.同步方法<br>
-（1）使用synchronized修饰的方法，保证A线程使用该方法时，其他线程只能方法外等候。<br>
-（2）同步方法实际上是吧this作为锁对象<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585374922056.png" alt=""><br>
-3.静态同步方法<br>
-（1）在同步方法的基础上使用static修饰<br>
-（2）静态同步方法实际上是把当前类的.class作为锁对象<br>
-4.Lock锁<br>
-（1） java.util. concurrent. locks . Lock机制提供了比synchronized代码块和                     synchronized方法更广泛的锁定操作,同步代码块/同步方法具有的功能Lock都                     有,除此之外更强大,更体现面向对象。<br>
-（2）<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585375228208.png" alt=""></p>
-<h1 id="线程状态概述">线程状态概述</h1>
-<figure data-type="image" tabindex="1"><img src="https://mazhuang19981201.github.io//post-images/1585377771710.png" alt=""></figure>
-<h2 id="什么是等待唤醒机制">什么是等待唤醒机制</h2>
-<pre><code> 这是多个线程间的一种协作机制。 谈到线程我们经常想到的是线程间的竞争( race ) ,比如去争夺锁,但这并不是故事的全部,线程间也会有协作机制。就好比在公司里你和你的同事们,你们可能存在在晋升时的竞争,但更多时候你们更多是一起合作以完成某些任务。
- 就是在一个线程进行了规定操作后,就进入等待状态( wait() ),等待其他线程执行完他们的指定代码过后 再将其唤醒( notify() ) ;在有多个线程进行等待时，如果需要,可以使用notifAll()来唤醒所有的等待线程。
- wait/notify就是线程间的一种协作机制。
-</code></pre>
-<h2 id="等待唤醒中的方法">等待唤醒中的方法</h2>
-<pre><code> 等待唤醒机制就是用于解决线程间通信的问题的,使用到的3个方法的含义如下:
-  wait :线程不再活动,不再参与调度,进入waitset中,因此不会浪费CPU资源,也不会去竞争锁了,这时的线程状态即是WAITING。它还要等着别的线程执行一个特别的动作,也即是&quot;通知( notify )“在这个对象上等待的线程从wait set中释放出来,重新进入到调度队列( ready queue )中。
-  notify :则选取所通知对象的wait set中的一个线程释放;例如,餐馆有空位置后,等候就餐最久的顾客最先入座。
-  notifyAll :则释放所通知对象的wait set.上的全部线程。</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[java面试题第二部分（容器部分）]]></title>
-        <id>https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-er-bu-fen-rong-qi-bu-fen</id>
-        <link href="https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-er-bu-fen-rong-qi-bu-fen">
-        </link>
-        <updated>2020-03-28T02:59:30.000Z</updated>
-        <content type="html"><![CDATA[<p>请点开下面连接进入：<br>
-<a href="https://mp.weixin.qq.com/s/Yl9pTaQYKwf0rZ6InG9OZg">java容器部分面试题</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[java面试题第一模块 java基础部分]]></title>
-        <id>https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-yi-mo-kuai-java-ji-chu-bu-fen</id>
-        <link href="https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-yi-mo-kuai-java-ji-chu-bu-fen">
-        </link>
-        <updated>2020-03-26T04:33:43.000Z</updated>
-        <content type="html"><![CDATA[<p>最近在知乎上看到了一些不错的java面试题，感觉质量挺高的，在此记录一下：<br>
-<a href="https://mp.weixin.qq.com/s/IBbD3CmVWsTL9ymHg6gGGA">知乎面试题第一部分</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[JSONView插件的坑]]></title>
-        <id>https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng</id>
-        <link href="https://mazhuang19981201.github.io//post/jsonview-cha-jian-de-keng">
-        </link>
-        <updated>2020-03-25T16:07:11.000Z</updated>
-        <content type="html"><![CDATA[<p>由于之前在测试项目时，后端的返回数据为json格式，由于直接响应的页面时，它的可读性不是很高，所以我就下载了一个插件，叫做JSONView，使用插件后自我感觉良好，显示的json的进行了格式化可读性也比较高。<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585152632865.png" alt=""><br>
-但是之后对数据库中的信息进行添加操作时，发现了一个很奇妙的bug，就是如果在主键自增的基础上，在添加信息时，总是把相同的一个信息同时添加两条记录，在无数次查看后端代码，总是发现不了问题所在，最后在谷歌浏览器的抓包工具上发现了问题<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585152809741.png" alt=""><br>
-JSONView插件在启动状态下，向后端发送请求时，会发送两次请求，当我把JSONView插件关闭掉之后，这个问题就不存在了。<br>
-具体为什么会发送两次请求，欢迎大佬前来指点。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[在maven中使用tomcat插件无法启动的问题]]></title>
-        <id>https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti</id>
-        <link href="https://mazhuang19981201.github.io//post/zai-maven-zhong-shi-yong-tomcat-cha-jian-wu-fa-qi-dong-de-wen-ti">
-        </link>
-        <updated>2020-03-25T15:15:35.000Z</updated>
-        <content type="html"><![CDATA[<p>在近在写一个项目的时候，突然遇到了一个问题，我的项目用本地的tomcat启动没有任何的问题，然而当我用maven的tomcat插件的时候，突然就报出了一个令我百思不得其解的错误。如下：<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585149723987.png" alt=""><br>
-我在百度上面找了好多的解决方案还是没有找到真正的解决问题的方案。最后发现是在刚开始写程序时，在我的jdk的Java\jdk1.8.0_181\jre\lib\ext这个目录下放了servler-api.jar<br>
-<img src="https://mazhuang19981201.github.io//post-images/1585150218331.png" alt=""><br>
-在jdk运行时，jdk自身的servlet-api插件和maven的tomcat插件发生了冲突，删除掉jdk的servlet-api.jar就可以运行了。</p>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mazhuang19981201.github.io//post/duo-xian-cheng-xue-xi-zong-jie">
+                  <h3 class="post-title">
+                    多线程学习总结
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
