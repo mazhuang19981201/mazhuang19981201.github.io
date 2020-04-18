@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>马壮的博客</title>
-    <updated>2020-04-05T12:19:35.563Z</updated>
+    <updated>2020-04-18T05:44:22.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,6 +10,67 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, 马壮的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[docker 学习笔记]]></title>
+        <id>https://mazhuang19981201.github.io//post/docker-xue-xi-bi-ji</id>
+        <link href="https://mazhuang19981201.github.io//post/docker-xue-xi-bi-ji">
+        </link>
+        <updated>2020-04-10T09:55:56.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="docker的安装与启动">docker的安装与启动</h1>
+<h2 id="docker-的安装">docker 的安装</h2>
+<p>1.yum包更新到最新<br>
+sudo yum update<br>
+2.安装需要的软件包<br>
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2<br>
+3.设置yum源为阿里云<br>
+sudo yum-config-manager --add--repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo<br>
+4.安装docker<br>
+sudo yum install docker-ce<br>
+5.安装后查看版本<br>
+docker -v</p>
+<h2 id="docker的启动与停止">docker的启动与停止</h2>
+<p>1.启动<br>
+systemctl start docker<br>
+2.停止<br>
+systemctl stop docker<br>
+3.查看启动状态<br>
+systemctl status docker<br>
+4.重新启动docker<br>
+systemctl restart docker<br>
+5.设置开机启动<br>
+systemctl enable docker</p>
+<h2 id="docker的常用命令">docker的常用命令</h2>
+<p>1.查看docker中的镜像<br>
+docker images<br>
+2.搜索镜像<br>
+docker search ...<br>
+3.下载镜像<br>
+docker pull ...<br>
+4.删除镜像<br>
+docker rmi 镜像id<br>
+5.删除所有镜像<br>
+docker rmi ·docker images -q·  这个引号是esc下面的符号<br>
+6.创建和启动容器<br>
+docker run -it --name=mycentos centos:7 /bin/bash 创建交互式容器，在使用exit退出后，docker ps 查询不到<br>
+docker run -di --name=mycentos2 centos:7 创建守护时容器，使用exit退出后，也可以使用<br>
+docker ps查询<br>
+7.复制文件<br>
+docker cp 文件名 容器名：/user/local 从宿主机拷贝到docker容器中<br>
+docker cp 容器名：文件路径到文件名 宿主机路径到文件名 从docker容器中拷贝到宿主机中<br>
+8.目录挂载<br>
+就是宿主机和docker容器共享一个目录<br>
+docker run -di -v 宿主机目录 --name=容器名 centos:7（镜像名）<br>
+9.查看容器的ip<br>
+docker inspect 容器名<br>
+10.docker容器的备份与迁移<br>
+（1）容器保存为镜像<br>
+docker commit 容器名称 新镜像名称<br>
+（2）镜像备份<br>
+docker save -o mynginx.tar 镜像名称<br>
+（3）镜像恢复<br>
+docker load -i mynginx.tar</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[springdata jpa学习总结]]></title>
         <id>https://mazhuang19981201.github.io//post/springdata-jpa-xue-xi-zong-jie</id>
