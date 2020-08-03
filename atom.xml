@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>马壮的博客</title>
-    <updated>2020-04-18T05:44:22.268Z</updated>
+    <updated>2020-08-03T09:53:56.998Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, 马壮的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[正则表达式]]></title>
+        <id>https://mazhuang19981201.github.io//post/zheng-ze-biao-da-shi</id>
+        <link href="https://mazhuang19981201.github.io//post/zheng-ze-biao-da-shi">
+        </link>
+        <updated>2020-07-13T01:35:09.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="什么是正则表达式">什么是正则表达式</h1>
+<p>正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。给定一个正则表达式和另一个字符串，可以通过正则表达式从字符串中获取我们想要的特定部分。正则表达式灵活性、逻辑性和功能性非常强，可以迅速地用极简单的方式达到字符串额复杂控制，但对于共接触的人来说比较晦涩难懂。由于正则表达式主要应用对象是文本，因此他在各种文本编辑器场合都有应用。</p>
+<h1 id="基本语法">基本语法</h1>
+<ul>
+<li>runoo+b 结果：runooob runoooob runooooob +号代表前面的字符可以出现一次或者多次</li>
+<li>runoo*b 结果：runoob runooob runoooob *号代表前面的字符可以不出现，也可以出现一次或者是多次</li>
+<li>runoo?b 结果：runoob runooob ?号代表前面的字符最多可以出现一次  也就是0或者1次</li>
+<li>[abc]：代表a或者b，或者c字符中的一个。</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[docker 学习笔记]]></title>
         <id>https://mazhuang19981201.github.io//post/docker-xue-xi-bi-ji</id>
