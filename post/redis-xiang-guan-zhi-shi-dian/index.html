@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>java面试题第二部分（容器部分） | 马壮的博客</title>
+<title>Redis相关知识点 | 马壮的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,21 +92,39 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">java面试题第二部分（容器部分）</h2>
-            <div class="post-date">2020-03-28</div>
+            <h2 class="post-title">Redis相关知识点</h2>
+            <div class="post-date">2020-08-03</div>
             
             <div class="post-content">
-              <p>请点开下面连接进入：<br>
-<a href="https://mp.weixin.qq.com/s/Yl9pTaQYKwf0rZ6InG9OZg">java容器部分面试题</a></p>
+              <h1 id="redis事务">Redis事务</h1>
+<p>1.Redis事务的概念<br>
+Redis事务的本质是一组命令的集合。事务支持一次执行多个命令，一个事务中的所有命令都会被序列化。在事务执行过程中，会按照顺序串行化执行队列中的命令，其他客户端提交的命令不会插入到事务执行命令序列中。<br>
+2 Redis事务中没有隔离的概念<br>
+批量操作在发送Exec命令前被放入队列缓存中，并不会被实际执行，也就不存在事务内的查询要看到到事务里的更新，事务外查询不能看到。<br>
+3 Redis不保证原子性<br>
+Redis中，单条命令是原子性执行的，但是事务不保证原子性，并且没有回滚。事务中任意命令执行失败，其余的命令仍会执行。<br>
+4 Redis事务的三个阶段</p>
+<ul>
+<li>开始事务</li>
+<li>命令入队</li>
+<li>执行事务<br>
+5 Redis事务的相关命令<br>
+watch key1 key2：监视一个或者是多个key，如果事务执行之前，被监视的key被其他的命令改动，则事务会被打断。<br>
+multi：标记一个事务的开始（queued）<br>
+exec：执行所有事务块的命令<br>
+discard：取消事务，放弃对事务快中的所有命令。<br>
+6 Redis事务执行示例：<br>
+<img src="https://mazhuang19981201.github.io//post-images/1596449149278.png" alt=""></li>
+</ul>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://mazhuang19981201.github.io//post/java-mian-shi-ti-di-yi-mo-kuai-java-ji-chu-bu-fen">
+                <a href="https://mazhuang19981201.github.io//post/zheng-ze-biao-da-shi">
                   <h3 class="post-title">
-                    java面试题第一模块 java基础部分
+                    正则表达式
                   </h3>
                 </a>
               </div>

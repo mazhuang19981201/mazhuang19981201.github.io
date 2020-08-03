@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mazhuang19981201.github.io/</id>
     <title>马壮的博客</title>
-    <updated>2020-08-03T09:53:56.998Z</updated>
+    <updated>2020-08-03T10:06:19.404Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mazhuang19981201.github.io/"/>
     <link rel="self" href="https://mazhuang19981201.github.io//atom.xml"/>
@@ -10,6 +10,34 @@
     <logo>https://mazhuang19981201.github.io//images/avatar.png</logo>
     <icon>https://mazhuang19981201.github.io//favicon.ico</icon>
     <rights>All rights reserved 2020, 马壮的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Redis相关知识点]]></title>
+        <id>https://mazhuang19981201.github.io//post/redis-xiang-guan-zhi-shi-dian</id>
+        <link href="https://mazhuang19981201.github.io//post/redis-xiang-guan-zhi-shi-dian">
+        </link>
+        <updated>2020-08-03T09:54:07.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="redis事务">Redis事务</h1>
+<p>1.Redis事务的概念<br>
+Redis事务的本质是一组命令的集合。事务支持一次执行多个命令，一个事务中的所有命令都会被序列化。在事务执行过程中，会按照顺序串行化执行队列中的命令，其他客户端提交的命令不会插入到事务执行命令序列中。<br>
+2 Redis事务中没有隔离的概念<br>
+批量操作在发送Exec命令前被放入队列缓存中，并不会被实际执行，也就不存在事务内的查询要看到到事务里的更新，事务外查询不能看到。<br>
+3 Redis不保证原子性<br>
+Redis中，单条命令是原子性执行的，但是事务不保证原子性，并且没有回滚。事务中任意命令执行失败，其余的命令仍会执行。<br>
+4 Redis事务的三个阶段</p>
+<ul>
+<li>开始事务</li>
+<li>命令入队</li>
+<li>执行事务<br>
+5 Redis事务的相关命令<br>
+watch key1 key2：监视一个或者是多个key，如果事务执行之前，被监视的key被其他的命令改动，则事务会被打断。<br>
+multi：标记一个事务的开始（queued）<br>
+exec：执行所有事务块的命令<br>
+discard：取消事务，放弃对事务快中的所有命令。<br>
+6 Redis事务执行示例：<br>
+<img src="https://mazhuang19981201.github.io//post-images/1596449149278.png" alt=""></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[正则表达式]]></title>
         <id>https://mazhuang19981201.github.io//post/zheng-ze-biao-da-shi</id>
