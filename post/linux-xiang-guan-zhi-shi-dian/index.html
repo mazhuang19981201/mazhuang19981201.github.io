@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1596517681874">
+<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1596518028330">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mazhuang19981201.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://mazhuang19981201.github.io/">
-        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1596517681874" class="site-logo">
+        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1596518028330" class="site-logo">
         <h1 class="site-title">马壮的博客</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -160,20 +160,16 @@
 chmod +x ./test.sh<br>
 ./test.sh<br>
 (2)shell变量的定义<br>
-&lt; 1 &gt;your_name=&quot;mazhuang.club&quot;<br>
+- &lt; 1 &gt;your_name=&quot;mazhuang.club&quot;<br>
 注意：变量与等号之间不可以用空格<br>
 例子：将etc目录的文件名循环出来<br>
-for file in &quot;ls /etc&quot; 或者是 for file in $(ls /etc)<br>
-&lt; 2 &gt;使用变量,只需要在变量前面加上美元符号即可<br>
-your_name=&quot;mazhuang.clud&quot;<br>
-echo $your_name 或者 echo  <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 166: …  &lt; 6 &gt;截取字符串，使用#̲号进行截取，索引从0开始，例如…'>{your_name}
-     &lt; 3 &gt;只读变量，使用readonly命令，可以把变量变为只读变量，不能被修改
-     &lt; 4 &gt;删除变量，使用unset命令，但是unset命令不能够删除readonly变量
-     &lt; 5 &gt;拼接字符串，拼接字符串时使用单引号或者是双引号，没有加号
-     &lt; 6 &gt;截取字符串，使用#号进行截取，索引从0开始，例如：
-     ![](https://mazhuang19981201.github.io//post-images/1596517169624.png) 
-     &lt; 7 &gt;shell数组，定义方式例如 array=(value1 value2 value3),数组定义时，用括号，并且            每个值用空格分隔，shell数组没有大小索引界限，读取shell数组例如：&quot;</span>{array[0]}&quot;,           获取数组的长度时，与字符串类似，在读取的前面加上#号即可。<br>
-&lt; 8 &gt;</p>
+for file in &quot;ls /etc&quot; 或者是 for file in <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 284: …  &lt; 6 &gt;截取字符串，使用#̲号进行截取，索引从0开始，例如…'>(ls /etc)
+     -  &lt; 2 &gt;使用变量,只需要在变量前面加上美元符号即可 your_name=&quot;mazhuang.clud&quot;      echo ￥your_name 或者 echo  ￥{your_name}
+     -   &lt; 3 &gt;只读变量，使用readonly命令，可以把变量变为只读变量，不能被修改
+     -   &lt; 4 &gt;删除变量，使用unset命令，但是unset命令不能够删除readonly变量
+     -   &lt; 5 &gt;拼接字符串，拼接字符串时使用单引号或者是双引号，没有加号
+     -   &lt; 6 &gt;截取字符串，使用#号进行截取，索引从0开始，例如：![](https://mazhuang19981201.github.io//post-images/1596517169624.png)
+     -   &lt; 7 &gt;shell数组，定义方式例如 array=(value1 value2 value3),数组定义时，用括号，并且            每个值用空格分隔，shell数组没有大小索引界限，读取shell数组例如：&quot;</span>{array[0]}&quot;,           获取数组的长度时，与字符串类似，在读取的前面加上#号即可。</p>
 
             </div>
             
