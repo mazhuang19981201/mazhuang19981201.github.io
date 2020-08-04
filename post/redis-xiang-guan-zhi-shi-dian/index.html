@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1596449156296">
+<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1596517681874">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://mazhuang19981201.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://mazhuang19981201.github.io/">
-        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1596449156296" class="site-logo">
+        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1596517681874" class="site-logo">
         <h1 class="site-title">马壮的博客</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -116,6 +116,12 @@ discard：取消事务，放弃对事务快中的所有命令。<br>
 6 Redis事务执行示例：<br>
 <img src="https://mazhuang19981201.github.io//post-images/1596449149278.png" alt=""></li>
 </ul>
+<h1 id="redis持久化">Redis持久化</h1>
+<p>Redis是一个可持久化的NoSql数据库，Redis支持两种持久化方案，RDB和AOF<br>
+1 RDB<br>
+RDB是Redis的默认持久化策略，就是在指定的时间间隔内将内存中的数据集快照写入磁盘中，待服务重启时，将快照读入内存中。<br>
+RDB的持久化策略如下图所示：<br>
+<img src="https://mazhuang19981201.github.io//post-images/1596450137210.png" alt=""></p>
 
             </div>
             

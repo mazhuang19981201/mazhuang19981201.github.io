@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Linux相关知识点 | 马壮的博客</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://mazhuang19981201.github.io//favicon.ico?v=1596517681874">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://mazhuang19981201.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://mazhuang19981201.github.io/">
+        <img src="https://mazhuang19981201.github.io//images/avatar.png?v=1596517681874" class="site-logo">
+        <h1 class="site-title">马壮的博客</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://mazhuang19981201.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Linux相关知识点</h2>
+            <div class="post-date">2020-08-04</div>
+            
+            <div class="post-content">
+              <h1 id="1linux的目录结构">1.Linux的目录结构</h1>
+<figure data-type="image" tabindex="1"><img src="https://mazhuang19981201.github.io//post-images/1596510704866.png" alt=""></figure>
+<h1 id="2linux文件和目录管理">2.Linux文件和目录管理</h1>
+<h2 id="21-绝对路径和相对路径">2.1 绝对路径和相对路径</h2>
+<ul>
+<li>绝对路径：由根目录写起，例如：/usr/share/doc 这个目录。</li>
+<li>相对路径：不是由根目录写起，例如由/usr/share/doc要切换到/usr/share/man时，相对路径的写法就是：../man</li>
+</ul>
+<h1 id="3处理目录的常见命令">3.处理目录的常见命令</h1>
+<h2 id="31-ls列出目录命令">3.1 ls（列出目录命令）</h2>
+<ul>
+<li>-a:全部的文件，连同隐藏的文件一起列出来（常用）</li>
+<li>-d:仅列出目录本身，而不是列出目录内的文件数据。（常用）</li>
+<li>-l:长数据串列出，包含文件的属性与权限等等数据。（常用）</li>
+</ul>
+<h2 id="32-cd切换目录命令">3.2 cd（切换目录命令）</h2>
+<h2 id="33-pwd显示所在目录">3.3 pwd（显示所在目录）</h2>
+<p>-p显示出确实的目录，而非使用连结路径。<br>
+<img src="https://mazhuang19981201.github.io//post-images/1596512050846.png" alt=""></p>
+<h2 id="34-mkdir创建目录">3.4 mkdir（创建目录）</h2>
+<ul>
+<li>-m:配置文件的权限</li>
+<li>-p:帮助你直接将你想要建立的目录递归创建出来<br>
+<img src="https://mazhuang19981201.github.io//post-images/1596512513452.png" alt=""></li>
+</ul>
+<h2 id="35-rmdir删除空的目录">3.5 rmdir（删除空的目录）</h2>
+<h2 id="36-cp复制文件或者目录">3.6 cp（复制文件或者目录）</h2>
+<ul>
+<li>-a:相当於-pdr的意思，至於pdr请参考下列说明; (常用)</li>
+<li>-d :若来源档为连结档的属性(ink fle) ,则复制连结档属性而非文件本身;</li>
+<li>-f :为强制(force)的意思,若目标文件已经存在且无法开启，则移除后再尝试一次;</li>
+<li>-i:若目标档(destination)已经存在时,在覆盖时会先询问动作的进行(常用)。</li>
+<li>-1 :进行硬式连结(hard link)的连结档创建,而非复制文件本身 ;</li>
+<li>-p :连同文件的属性- 起复制过去,而非使用默认属性(备份常用) ;</li>
+<li>-r:递归持续复制,用於目录的复制行为;(常用)</li>
+<li>-s:复制成为符号连结档(symbolic link) ,亦即「捷径]文件;</li>
+<li>-u :若destination比source旧才升级destination !</li>
+</ul>
+<h2 id="37-rm移除文件或者是目录">3.7 rm（移除文件或者是目录）</h2>
+<ul>
+<li>-f:就是force的意思，忽略不存在的文件，不会出现警告的信息。</li>
+<li>-i:互动模式，在删除前会询问使用者是否动作。</li>
+<li>-r:递归删除，最常用的是目录的删除，这是非常危险的选项。</li>
+</ul>
+<h2 id="38-mv移动文件和目录或者是修改名称">3.8 mv（移动文件和目录，或者是修改名称）</h2>
+<ul>
+<li>-f：就是force的意思，如果目标已经存在，不会询问直接替换。</li>
+<li>-i:如果目标已经存在的话，会询问是否进行替换，</li>
+</ul>
+<h2 id="39-查看命令">3.9 查看命令</h2>
+<ul>
+<li>cat 从第一行开始查看</li>
+<li>tac 从最后一行开始查看</li>
+<li>more 一页一页的查看</li>
+<li>less 一页一页的翻动</li>
+<li>head -n 取出文件的前几行</li>
+<li>tail -n 取出文件的后几行</li>
+</ul>
+<h1 id="4shell脚本的编写">4.Shell脚本的编写</h1>
+<p>(1)执行脚本的方式<br>
+首先将脚本文件作为可执行的程序，然后运行<br>
+chmod +x ./test.sh<br>
+./test.sh<br>
+(2)shell变量的定义<br>
+&lt; 1 &gt;your_name=&quot;mazhuang.club&quot;<br>
+注意：变量与等号之间不可以用空格<br>
+例子：将etc目录的文件名循环出来<br>
+for file in &quot;ls /etc&quot; 或者是 for file in $(ls /etc)<br>
+&lt; 2 &gt;使用变量,只需要在变量前面加上美元符号即可<br>
+your_name=&quot;mazhuang.clud&quot;<br>
+echo $your_name 或者 echo  <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 166: …  &lt; 6 &gt;截取字符串，使用#̲号进行截取，索引从0开始，例如…'>{your_name}
+     &lt; 3 &gt;只读变量，使用readonly命令，可以把变量变为只读变量，不能被修改
+     &lt; 4 &gt;删除变量，使用unset命令，但是unset命令不能够删除readonly变量
+     &lt; 5 &gt;拼接字符串，拼接字符串时使用单引号或者是双引号，没有加号
+     &lt; 6 &gt;截取字符串，使用#号进行截取，索引从0开始，例如：
+     ![](https://mazhuang19981201.github.io//post-images/1596517169624.png) 
+     &lt; 7 &gt;shell数组，定义方式例如 array=(value1 value2 value3),数组定义时，用括号，并且            每个值用空格分隔，shell数组没有大小索引界限，读取shell数组例如：&quot;</span>{array[0]}&quot;,           获取数组的长度时，与字符串类似，在读取的前面加上#号即可。<br>
+&lt; 8 &gt;</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://mazhuang19981201.github.io//post/redis-xiang-guan-zhi-shi-dian">
+                  <h3 class="post-title">
+                    Redis相关知识点
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
